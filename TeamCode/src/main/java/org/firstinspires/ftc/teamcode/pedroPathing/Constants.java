@@ -17,12 +17,12 @@ public class Constants {
             .mass(15) // Weight of the robot in kg (this is estimated since we dont have a scale)
             .forwardZeroPowerAcceleration(0) // TUNE THIS
             .lateralZeroPowerAcceleration(0) // TUNE THIS
-            // Use dual PIDs for accuracy
+            // Use dual PIDs for accuracy (you should use this)
             .useSecondaryTranslationalPIDF(true)
             .useSecondaryHeadingPIDF(true)
             .useSecondaryDrivePIDF(true);
 
-    // Probably shouldn't mess with this for now
+    // You shouldn't mess with this for now
     public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
 
     public static MecanumConstants driveConstants = new MecanumConstants()
