@@ -27,7 +27,8 @@ public class Constants {
             .translationalPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
             .secondaryTranslationalPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
             .headingPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
-            .secondaryHeadingPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0));
+            .secondaryHeadingPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
+            .centripetalScaling(0); // TUNE THIS
 
     // You shouldn't mess with this for now
     public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
@@ -44,10 +45,10 @@ public class Constants {
             .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
             .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
             .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-            .robotWidth(0); // Distance between left and right wheels (inches)
-            .robotLength(0); // Distance between front and back wheels (inches)
+            .robotWidth(0) // Distance between left and right wheels (inches)
+            .robotLength(0) // Distance between front and back wheels (inches)
             .xVelocity(0) // TUNE THIS
-            .yVelocity(0) // TUNE THIS
+            .yVelocity(0); // TUNE THIS
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
             // Adjust the pod distances according to this diagram:
