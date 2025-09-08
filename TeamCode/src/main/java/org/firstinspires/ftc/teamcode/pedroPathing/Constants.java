@@ -6,7 +6,7 @@ import com.pedropathing.ftc.FollowerBuilder;
 import com.pedropathing.ftc.drivetrains.MecanumConstants;
 import com.pedropathing.ftc.localization.constants.PinpointConstants;
 import com.pedropathing.paths.PathConstraints;
-import com.pedropathing.control.PIDCoefficients;
+import com.pedropathing.control.PIDFCoefficients;
 import com.qualcomm.hardware.gobilda.GoBildaPinpointDriver;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -18,11 +18,11 @@ public class Constants {
             .mass(15) // Weight of the robot in kg (this is estimated since we dont have a scale)
             .forwardZeroPowerAcceleration(0) // TUNE THIS
             .lateralZeroPowerAcceleration(0) // TUNE THIS
-            .setBrakingStrength(0.5) // This should be fine for normal driving, you may change this after testing
+            //.setBrakingStrength(0.5) // This should be fine for normal driving, you may change this after testing
             // Use dual PIDs for accuracy (you should use this)
             .useSecondaryTranslationalPIDF(true)
             .useSecondaryHeadingPIDF(true)
-            .useSecondaryDrivePIDF(true);
+            .useSecondaryDrivePIDF(true)
             // TUNE THESE
             .translationalPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
             .secondaryTranslationalPIDFCoefficients(new PIDFCoefficients(0.1, 0, 0.01, 0))
@@ -45,8 +45,6 @@ public class Constants {
             .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
             .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
             .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-            .robotWidth(0) // Distance between left and right wheels (inches)
-            .robotLength(0) // Distance between front and back wheels (inches)
             .xVelocity(0) // TUNE THIS
             .yVelocity(0); // TUNE THIS
 
@@ -60,7 +58,7 @@ public class Constants {
             // Change this to goBILDA_4_BAR_POD or goBILDA_SWINGARM_POD
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
             // Change this to FORWARD or REVERSE according to the pod direction
-            .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.REVERSE)
+            .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.REVERSED)
             .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
 
     // Don't touch this
