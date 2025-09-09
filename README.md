@@ -5,13 +5,8 @@
 - If Android Studio is already installed on your laptop, make sure it's the latest version (Narwhal 3).
 
 ## 2. Clone the Project
-1. In Android Studio, click "Clone Repository" in the top right of teh "Welcome to Android Studio" screen. NOTE: If you are already in the editor, press `File -> Close Project`
-3. Enter the repository URL:
-   
-   ```
-   https://github.com/DylDevs/PedroPathingTest
-   ```
-   This will clone the **Pedro Pathing Quickstart** workspace.
+1. In Android Studio, click "Clone Repository" in the top right of the "Welcome to Android Studio" screen. NOTE: If you are already in the editor, press `File -> Close Project`
+2. Make a fork of this repository for yourself and input the URL. NOTE: If you are a Barrow Robotics team, make a fork to this organization in the format of {TEAM_NUMBER}-{SEASON}, ex. 18597-DECODE
 
 ## 3. Configure Constants
 In `TeamCode/src/main/java/org/firstinspires/ftc/teamcode/pedroPathing/Constants.java`, configure values to match your robot.  
